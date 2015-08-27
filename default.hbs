@@ -25,28 +25,30 @@
 </head>
 <body class="{{body_class}}">
     <nav id="navigator">
-        {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><div class="bloglogo" style="background: url({{@blog.logo}})"></div></a>{{/if}}
-        <ul>
-            <li class="ghost"><a href="{{@blog.url}}" title="Blog"></a></li>
-            <li class="twitter"><a href="https://twitter.com/dcefram" title="Twitter" target="_blank"></a></li>
-            <li class="github"><a href="https://github.com/dcefram" title="GitHub" target="_blank"></a></li>
-        </ul>
+        <a href="{{{@blog.url}}}">
+          <img src="https://pbs.twimg.com/profile_images/606522502534307840/mE9VJ79B_400x400.jpg" alt="" class="branding-image">
+        </a>
+        <p class="branding-name">Miguh Ruiz</p>
+        <p class="branding-description">Full Stack JavaScript Developer</p>
     </nav>
 
     {{{body}}}
 
     <footer class="site-footer">
-        <div class="inner">
-            {{!> footer-description}}
-            <section class="copyright">&copy; {{date format="YYYY"}} <a href="/">{{@blog.title}}</a>. All rights reserved. | <a href="{{@blog.url}}/rss/" target="_blank">RSS</a></section>
-            <section>Contents are licensed under... <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">Creative Commons</a>. Codes are <a href="http://opensource.org/licenses/MIT" target="_blank">MIT</a> :)</section>
-            <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://ghost.org/"><span class="hidden">Ghost</span></a> and ❤</section>
-        </div>
+      <img src="https://pbs.twimg.com/profile_images/606522502534307840/mE9VJ79B_400x400.jpg" alt="" class="branding-image footer-image">
+      <p class="branding-name" id="footer_elem">Miguh Ruiz</p>
+      <p class="branding-description" id="footer_elem">Full Stack JavaScript Developer</p>
+      <div class="icons">
+        <a class="flaticon-newspaper11" href="#"></a>
+        <a class="flaticon-github10" href="https://github.com/Galaxy42"></a>
+        <a class="flaticon-twitter1" href="https://twitter.com/MiguhRuiz"></a>
+      </div>
+      <a href="https://github.com/dcefram/stupendous" class="theme-rights">Basado en el tema Stupendous para ghost</a>
     </footer>
 
     {{ghost_foot}}
 
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
-    
+
 </body>
 </html>

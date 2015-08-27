@@ -1,11 +1,12 @@
 @import url("//fonts.googleapis.com/css?subset=latin,cyrillic-ext,latin-ext,cyrillic&family=Open+Sans+Condensed:300|Open+Sans:400,600,400italic,600italic|Merriweather:400,300,300italic,400italic,700,700italic|Roboto+Slab:400,300");
 @import url("//fonts.googleapis.com/css?family=Amatic+SC");
+@import url("//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700");
 @import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
 /**
  * Core styles
  */
 body {
-  background-color: #ebebeb;
+  background-color: #f7f7f7;
   color: #757575;
   font-size: 15px;
   font-weight: 100;
@@ -98,7 +99,8 @@ img {
  * Top Navigator
  */
 #navigator {
-  background: #0b0b0b;
+  background: #ccc;
+  height: 60px;
   max-width: 100%;
   margin: 0;
   overflow: hidden;
@@ -109,7 +111,7 @@ img {
 #navigator #blog-logo {
   display: inline-block;
   max-width: 80px;
-  max-height: 80px;
+  max-height: 8 0px;
   text-align: center;
   float: left;
 }
@@ -152,6 +154,28 @@ img {
 }
 #navigator ul li a:hover {
   background-size: 60px auto;
+}
+.branding-image {
+  height: 50px;
+  margin: 0.3em 0 0 2em;
+  width: 50px;
+}
+.branding-name {
+  color: #000;
+  font-family: "Source Sans Pro";
+  font-weight: 800;
+  margin-top: 0.3em;
+  position: absolute;
+  top: 0.1em;
+  left: 5.5em;
+}
+.branding-description {
+  color: #000;
+  font-family: "Source Sans Pro";
+  margin-top: 0.3em;
+  position: absolute;
+  top: 1.5em;
+  left: 5.5em;
 }
 /**
  * Site Head
@@ -515,9 +539,11 @@ img.userimage {
  * Footer
  */
 footer {
-  background: rgba(0,0,0,0.05);
+  background: #02161c;
+  height: 100px;
   margin: 4em 0 0;
   padding: 2em 0;
+  position: relative;
   text-align: center;
 }
 footer section {
@@ -533,6 +559,23 @@ footer.post-footer {
   background: none;
   border-top: 1px solid #ecf0f1;
   margin: 1em 2em 0;
+}
+#footer_elem {
+  color: #fff;
+  margin-top: 2.5em;
+}
+.icons {
+  position: absolute;
+  top: 4em;
+  right: 2em;
+}
+.theme-rights {
+  margin-top: 2em;
+  position: absolute;
+  right: 0.2em;
+}
+.footer-image {
+  margin-top: 1em;
 }
 /**
  * Pagination
@@ -693,6 +736,37 @@ a.archive-link {
   position: relative;
   top: -1px;
 }
+@font-face {
+  font-family: "Flaticon";
+  src: url("../fonts/flaticon.eot");
+  src: url("../fonts/flaticon.eot#iefix") format("embedded-opentype"), url("f../fonts/laticon.woff") format("woff"), url("../fonts/flaticon.ttf") format("truetype"), url("../fonts/flaticon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.flaticon-github10,
+.flaticon-newspaper11,
+.flaticon-twitter1 {
+  font-family: Flaticon;
+  font-size: 64px;
+  font-style: normal;
+  margin-left: 20px;
+}
+.flaticon-github10,
+.flaticon-twitter1 {
+  color: #fff !important;
+}
+.flaticon-newspaper11 {
+  color: #3498db;
+}
+.flaticon-github10:before {
+  content: "\e000";
+}
+.flaticon-newspaper11:before {
+  content: "\e001";
+}
+.flaticon-twitter1:before {
+  content: "\e002";
+}
 /**
  * Comments
  */
@@ -749,6 +823,9 @@ table tfoot {
   }
   .post-title {
     line-height: 35px;
+  }
+  .icons {
+    display: none;
   }
 }
 @media only screen and (min-width: 600px) {
