@@ -23,6 +23,14 @@
             {{content}}
         </section>
 
+        {{#if @labs.subscribers}}
+          <section class="gh-subscribe email">
+           <h4 class="gh-subscribe-title">¿Te ha gustado este artículo? Tengo mucho más para ti esperándote.</h3>
+           <h5>Solo necesitas incribirte en mi lista de correo. Obtén los artículos simple y rápidamente.</p>
+           {{subscribe_form placeholder="Email"}}
+           <span class="gh-subscribe-rss">O suscríbete <a href="http://cloud.feedly.com/#subscription/feed/{{@blog.url}}/rss/">via RSS</a> con Feedly!</span>
+         </section>
+       {{/if}}
         <section class="email">
           <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
           <style type="text/css">
